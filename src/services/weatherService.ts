@@ -25,7 +25,7 @@ export interface WeatherError {
 }
 
 // Replace with your OpenWeatherMap API key
-const API_KEY = "YOUR_API_KEY_HERE"; // Add your API key here
+const API_KEY = "14643480763bffac586f00265b0b9bc5"; // Add your API key here
 const BASE_URL = "https://api.openweathermap.org/data/2.5";
 
 export const fetchWeatherByCity = async (city: string): Promise<WeatherData> => {
