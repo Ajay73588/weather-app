@@ -20,19 +20,19 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-md gap-2">
+    <form onSubmit={handleSubmit} className="flex w-full max-w-md gap-2 transition-all hover:shadow-md p-1 rounded-lg">
       <Input
         type="text"
         value={city}
         onChange={(e) => setCity(e.target.value)}
         placeholder="Enter city name..."
-        className="flex-grow"
+        className="flex-grow border-weather-blue/30 focus-visible:ring-weather-blue/50 transition-all"
         disabled={isLoading}
       />
       <Button 
         type="submit" 
         disabled={isLoading || !city.trim()}
-        className="bg-weather-blue hover:bg-weather-blue-dark text-white"
+        className="bg-gradient-to-r from-weather-blue to-weather-blue-dark text-white hover:shadow-lg transition-all duration-300 ease-in-out"
       >
         {isLoading ? "Searching..." : <Search className="h-4 w-4" />}
       </Button>
